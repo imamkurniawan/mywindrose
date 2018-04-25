@@ -46,7 +46,10 @@ def plotWindrose(count_wind_dir,l1,l2,l3,l4,l5,l6,legend_loc):
 	theta = np.arange(0.0, 2*np.pi, 2*np.pi/N)
 	# radii = 10*np.random.rand(N)
 
-	bar_width = 0.4
+	# Ukuran lebar bar grafik
+	# jika N = 16 -> bar_width = 0.4
+	# jika N = 8 -> bar_width = 0.8
+	bar_width = 0.8
 
 	def six_times(l1,l2,l3,l4,l5,l6):
 		return l1+l2+l3+l4+l5+l6
@@ -140,13 +143,13 @@ def plotWindrose(count_wind_dir,l1,l2,l3,l4,l5,l6,legend_loc):
 # li = Percentage of windspeed distribution
 # li = ['E','','NE','','N','','NW','','W','','SW','','S','','SE','']
 #
-count_wind_dir = 16
-li1 = [10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160] 	
-li2 = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]    	
-li3 = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]    	
-li4 = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]    	
-li5 = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]   		
-li6 = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+count_wind_dir = 8
+li1 = [10,20,30,40,50,60,70,80] 	
+li2 = [0,0,0,0,0,0,0,0]    	
+li3 = [0,0,0,0,0,0,0,0]    	
+li4 = [0,0,0,0,0,0,0,0]    	
+li5 = [0,0,0,0,0,0,0,0]   		
+li6 = [0,0,0,0,0,0,0,0]
 legend_loc = 1
 
 plotWindrose(count_wind_dir,li1,li2,li3,li4,li5,li6,legend_loc)
