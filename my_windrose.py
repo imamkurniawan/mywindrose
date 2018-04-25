@@ -133,16 +133,17 @@ def plotWindrose(count_wind_dir,l1,l2,l3,l4,l5,l6,legend_loc):
 	    bar.set_edgecolor('#000000')
 	    bar.set_linewidth(0.5)
 
-
-	ax.legend(['> 25 Knots','20 - 25 Knots','15 - 20 Knots','10 - 15 Knots','5 - 10 Knots', '0.9 - 5 Knots'], loc=legend_loc)
+	ax.legend(['> 25 Knots','20 - 25 Knots','15 - 20 Knots','10 - 15 Knots','5 - 10 Knots', '0.9 - 5 Knots'], loc=legend_loc, title='Wind Speed')
 	plt.savefig('figures/windrose_8d.png',dpi=300)
 	show()
 
 
 # Sample to use
 # li = Percentage of windspeed distribution
-# li = ['E','','NE','','N','','NW','','W','','SW','','S','','SE','']
-#
+# N = 16
+# li = [E,67.5,NE,22.5,N,'','NW','','W','','SW','','S','','SE','']
+# N = 8
+# li = [E,NE,N,NW,W,SW,S,SE]
 count_wind_dir = 8
 li1 = [10,20,30,40,50,60,70,80] 	
 li2 = [0,0,0,0,0,0,0,0]    	
